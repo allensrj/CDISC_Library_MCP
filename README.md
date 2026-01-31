@@ -44,7 +44,7 @@ CDISC_API_KEY=你的API_KEY
 allensrj-cdisc-library-mcp
 ```
 
-默认使用 `streamable-http` 传输。若需其他传输方式，可在代码中修改 `main.py` 的 `run()` 或通过 MCP 客户端配置。
+默认使用 `stdio` 传输。若需其他传输方式，可在代码中修改 `main.py` 的 `run()` 或通过 MCP 客户端配置。
 
 ## 提供的工具概览
 
