@@ -61,5 +61,10 @@ def greet_user(name: str, style: str = "friendly") -> str:
     return f"{styles.get(style, styles['friendly'])} for someone named {name}."
 
 
+def run():
+    """供 PyPI 安装后的命令行入口 `allensrj-cdisc-library-mcp` 调用。"""
+    mcp.run(transport="stdio")
+
+
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    run()

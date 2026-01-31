@@ -1,9 +1,29 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "mcp-server"
+name = "allensrj-cdisc-library-mcp"
 version = "0.1.0"
-description = "Add your description here"
+description = "CDISC Library MCP server: SDTM, ADaM, CDASH, Controlled Terminology tools for AI assistants"
 readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=1.26.0",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.0.0",
+    "twine>=5.0.0",
+]
+
+[project.scripts]
+allensrj-cdisc-library-mcp = "main:run"
+
+[tool.setuptools]
+py-modules = ["main", "config"]
+packages = ["utils", "tools"]
